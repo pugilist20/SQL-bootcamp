@@ -1,0 +1,1 @@
+SELECT (SELECT name from person where person_id=person.id) as person_name, (SELECT name from pizzeria where pizzeria_id=pizzeria.id) as pizzeria_name from (SELECT * from person_visits where visit_date BETWEEN '2022-01-07' AND '2022-01-09') as pv;
